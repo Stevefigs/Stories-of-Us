@@ -1,4 +1,142 @@
 * {
   box-sizing: border-box; }
 
+body {
+  height: 100vh;
+  display: grid;
+  margin: 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr; }
+  @media only screen and (min-width: 40em) {
+    body {
+      grid-template-columns: 1.56fr 1fr;
+      grid-template-rows: 1fr; } }
+  body main {
+    z-index: 1;
+    display: grid;
+    grid-template-rows: auto 450px 1fr auto;
+    margin: 0;
+    padding: 0;
+    grid-row: 1;
+    grid-column: 1; }
+    @media only screen and (min-width: 40em) {
+      body main {
+        padding: 6rem 0 5rem 6rem;
+        grid-column: 1;
+        height: 100%;
+        grid-template-rows: repeat(3, auto);
+        background-color: #F0F0F0; } }
+    body main header {
+      z-index: 2;
+      position: fixed;
+      grid-row: 1;
+      display: grid;
+      grid-template-columns: 60px auto;
+      grid-gap: 1rem;
+      background-color: white;
+      width: 100vw; }
+      @media only screen and (min-width: 40em) {
+        body main header {
+          grid-row: 1;
+          grid-template-columns: repeat(2, auto);
+          grid-gap: 3rem;
+          padding: 0 0 0 10%;
+          width: auto;
+          background-color: transparent;
+          background: #f0f0f0;
+          background: radial-gradient(circle, #f0f0f0 0%, #f0f0f0 68%, rgba(240, 240, 240, 0) 100%); } }
+      body main header nav {
+        grid-column: 1;
+        display: grid;
+        justify-items: start; }
+        @media only screen and (min-width: 40em) {
+          body main header nav {
+            justify-items: end; } }
+        body main header nav svg {
+          margin: 1.76rem .9rem 0 14px;
+          padding: .75rem; }
+          @media only screen and (min-width: 40em) {
+            body main header nav svg {
+              margin: 1.45rem 0 0 0;
+              padding: 0; } }
+      body main header h1 {
+        font-family: ff-scala, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        align-self: end;
+        color: #434343;
+        grid-column: 2;
+        font-size: 2.75rem; }
+        @media only screen and (min-width: 40em) {
+          body main header h1 {
+            margin: 0;
+            padding: 0;
+            line-height: 1;
+            font-size: 6rem;
+            align-self: start; } }
+    body main section {
+      grid-row: 3;
+      background-color: #F0F0F0; }
+      @media only screen and (min-width: 40em) {
+        body main section {
+          grid-row: 2;
+          padding: 7rem 7rem 0 38%;
+          background-color: transparent; } }
+      body main section p {
+        font-family: chainprinter, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        padding-left: 4rem;
+        line-spacing: 26; }
+        @media only screen and (min-width: 40em) {
+          body main section p {
+            font-size: 1.5rem;
+            padding: 0; } }
+    body main footer {
+      grid-row: 4;
+      align-self: end;
+      padding: 0 .2rem;
+      background-color: white; }
+      @media only screen and (min-width: 40em) {
+        body main footer {
+          padding: 0 5% 0 40%;
+          grid-row: 3;
+          background-color: transparent;
+          margin: 45px 0 0 0; } }
+      body main footer p {
+        font-size: .59rem;
+        font-family: chainprinter, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        padding: 0 1rem; }
+        @media only screen and (min-width: 40em) {
+          body main footer p {
+            font-size: .75rem;
+            padding: 0; } }
+  body div {
+    z-index: 0;
+    grid-row: 1;
+    grid-column: 1; }
+    @media only screen and (min-width: 40em) {
+      body div {
+        z-index: 0;
+        grid-column: 2; } }
+    body div img {
+      object-fit: cover;
+      height: 400px;
+      width: 230px;
+      transform: rotate(-6deg) translateY(120px) translateX(70px); }
+      @media only screen and (min-width: 40em) {
+        body div img {
+          height: 900px;
+          width: 490px;
+          transform: rotate(-4deg) translateY(140px) translateX(100px);
+          position: fixed;
+          transition: all .4s; }
+          body div img:hover {
+            transform: rotate(-6deg) translateY(130px) translateX(90px) scale(1.03);
+            position: fixed;
+            filter: drop-shadow(0 0 0.3rem lightgrey); } }
+
 /*# sourceMappingURL=main.css.map */
