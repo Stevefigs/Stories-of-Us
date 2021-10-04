@@ -1,14 +1,17 @@
-/* EMAIL FORM HANDLING */
+const btn = document.querySelector('.burger');
+const overlay = document.querySelector('.overlay');
+const content = document.querySelector('main');
 
-$('.form-button input').click(function(e){
-  // do not submit form
-  e.preventDefault();
-  // save value if the form field is not blank or the default
-  if( $('#email').val() !== '' && $('#email').val() !== 'Email' ){
-    var val = $('#email').val();
-    // add email address to message
-    $('.form-message span').text(val);
-    // show message (initially hidden in CSS)
-    $('.form-message').fadeIn();
-  }
+
+btn.addEventListener('click',function(){
+  overlay.classList.remove('hide');
+  setTimeout(function(){overlay.classList.remove('fade')},100);
+  content.classList.add('hide');
 })
+
+overlay.addEventListener('click',function(){
+  overlay.classList.add('fade');
+  setTimeout(function(){overlay.classList.add('hide')},200);
+  content.classList.remove('hide');
+})
+
