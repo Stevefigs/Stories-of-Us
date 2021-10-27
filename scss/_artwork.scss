@@ -1,0 +1,120 @@
+body.artwork{
+
+
+	@media only screen and (min-width: 40em){
+  		grid-template-rows:1fr;
+		grid-template-columns:1fr;
+		max-width: 1600px;
+  	}
+
+
+	main{
+		display:grid;
+		grid-template-rows: auto 1fr;
+		grid-template-columns: 1fr 1fr;
+		
+
+		@media only screen and (min-width: 40em){
+			height:100%;
+			grid-template-rows: 1fr;
+			grid-template-columns: .85fr 420px 1fr;
+		}
+
+
+		section.title{
+			display:grid;
+			grid-row: 1;
+			grid-column: 2;
+			padding:0;
+			margin:0;
+
+    		@media only screen and (min-width: 40em){
+			margin: 0 0px 0 10%;
+    		padding-left: 1rem;
+  			grid-column: 1;
+			padding-top:10rem;
+			margin: 0 0px 0 10%;
+    		padding-left: 1rem;
+    	}
+
+			h2{
+				font-family: ff-scala, sans-serif;
+      			font-style: normal;
+      			font-weight: bold;
+      			writing-mode: vertical-lr;
+				transform: rotate(-180deg);
+				margin:1rem 10px 1rem 12px;	
+
+
+				@media only screen and (min-width: 40em){
+					font-family: ff-scala, sans-serif;
+      				font-style: normal;
+      				font-weight: bold;
+      				font-size:3rem;
+      				align-self: center;
+      				color: #434343;
+					margin:0;
+					padding:0;
+					writing-mode: vertical-lr;
+					transform: rotate(-180deg);	
+					padding: 0% 21% 80% 53%;
+				}
+			}
+		}
+		img{
+			grid-row:1;
+			grid-column:1;
+			object-fit: cover;
+    		width: 160%;
+    		margin: 6rem 0 0 0;
+
+			@media only screen and (min-width: 40em){
+				grid-column:2;
+				object-fit:cover;
+   				width: 100%;
+    			margin: 14rem 0 0px 0;
+    			overflow: auto;
+    			padding-right: 3rem;
+    		}
+		}
+		section.copy{
+			display:grid;
+			grid-template-rows: repeat(3, auto);
+			background-color: #f0f0f0;
+			grid-row:2;
+			grid-column:1 / span 2;
+			padding: 2rem;
+
+			@media only screen and (min-width: 40em){
+				grid-row:1;
+				grid-column:3;
+
+			}
+			h1{
+				font-family: ff-scala, sans-serif;
+      			font-style: normal;
+      			font-weight: bold;
+      			font-size: 3rem;
+      			color: #434343;
+      			padding:0;
+
+      			@media only screen and (min-width: 40em){
+					font-family: ff-scala, sans-serif;
+      				font-style: normal;
+      				font-weight: bold;
+      				font-size: 5rem;
+      				color: #434343;
+      				padding:6rem 4rem 0 4rem;
+				}
+			}
+			p{
+				font-family: chainprinter, sans-serif;
+				font-style: normal;
+				font-weight: 400;
+				padding:3rem 4rem;
+			}
+		}
+	}
+
+
+}
